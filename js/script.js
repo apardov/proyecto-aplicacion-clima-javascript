@@ -1,5 +1,7 @@
+require('dotenv').config();
+
 const urlBase = 'https://api.openweathermap.org/data/2.5/weather';
-const apiKey = '3ffe47ee73f560d3c03f517cbbf98f3d';
+const apiKey = process.env.API_KEY;
 const diffKelvin = 273.15;
 
 
