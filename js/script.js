@@ -1,3 +1,4 @@
+// Dotenv for .env
 require('dotenv').config();
 
 const urlBase = 'https://api.openweathermap.org/data/2.5/weather';
@@ -27,7 +28,7 @@ const showCity = (data) => {
         <h2>${data.name}</h2>
         <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather">
         <p>${data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1).toLowerCase()}</p>
-        <p><strong>La temperatura es de : </strong>${Math.round(data.main.temp - 273)} °C</p>
+        <p><strong>La temperatura es de : </strong>${Math.round(data.main.temp - diffKelvin)} °C</p>
     </div>
 `;
 }
